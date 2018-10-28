@@ -2,8 +2,9 @@ from machine import Pin
 import time
 led = Pin(2, Pin.OUT)
 
-while True:
-    led.on()
-    time.sleep(1)
-    led.off()
-    time.sleep(1)
+def blink(sleep=1):
+    while True:
+        led.on()
+        time.sleep(sleep)
+        led.off()
+        time.sleep(sleep)
