@@ -99,6 +99,6 @@ def simple_server():
         #         '<tr><td>%s</td><td>%s</td></tr>' % (str(p), status[p.value()])
         #         for p in pins]
         #     response = html % '\n'.join(rows)
-        #     # response = template.html % (led.r, led.g, led.b)
+        #     # response = template.py % (led.r, led.g, led.b)
         #     conn_send(conn, response)
         # conn.close()

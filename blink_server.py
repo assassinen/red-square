@@ -80,6 +80,5 @@ def simple_server():
                 break
 
         response = button_html
-        print(response)
         cl.send(response)
         cl.close()
