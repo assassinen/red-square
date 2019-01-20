@@ -28,3 +28,5 @@ if __name__ == "__main__":
         pulse(red, 20)
         pulse(green, 20)
         pulse(blue, 20)
+
+#что то меняю
