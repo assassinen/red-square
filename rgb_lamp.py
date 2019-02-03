@@ -83,6 +83,7 @@ def rgb_lamp():
     while True:
         conn, addr = s.accept()
         method, url = get_url(conn)
+        print(method)
         path, query = parse_url(url)
         print(addr[0], '-', method, url)
         if path == '/':

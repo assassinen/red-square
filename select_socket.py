@@ -1,9 +1,3 @@
-from esp8266_network import set_network, set_host_point
-from simple_server import simple_server
-from rgb_lamp import rgb_lamp
-# from blink import blink
-import time
-
 import socket, select
 from machine import Pin
 led = Pin(2, Pin.OUT)
@@ -37,13 +31,7 @@ def serv(port=14900):
             for readable in r:
                 conn, conn_addr = sock.accept()
                 handle_pin(conn, conn_addr)
+    # a cюда можно вставить обработку еще-чего-то
+    # а можно вставить такую обработку по таймеру
 
-
-if __name__ == "__main__":
-    set_host_point()
-    set_network()
-    time.sleep(sleep)
-    led.off()
-    time.sleep(sleep)
-    led.on()
-    serv()
+serv()

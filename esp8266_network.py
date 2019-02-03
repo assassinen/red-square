@@ -18,6 +18,11 @@ def set_network():
     sta_if.connect('122P-330W', 'zyxel-684-ias')
     sta_if.ifconfig()
 
+def set_host_point():
+    ap_if.active(True)
+    ap_if.config(essid='RSExecutor')
+    ap_if.config(password='RSExecutor')
+
 
 if __name__ == "__main__":
     get_ip()
